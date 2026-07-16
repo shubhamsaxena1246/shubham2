@@ -9,28 +9,16 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: envirnoment/dev
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Show Repository Structure
-        run: |
-          pwd
-          ls -la
-          find . -maxdepth 3 -type d
+      - uses: hashicorp/setup-terraform@v3
 
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
-
-      - name: Terraform Format Check
-        run: terraform fmt -check
-        working-directory: envirnoment/dev
-      - name: Terraform Init
-        run: terraform init
-        working-directory: envirnoment/dev
-      - name: Terraform Validate
-        run: terraform validate
-       working-directory: envirnoment/dev
-      - name: Terraform Plan
-        run: terraform plan
-       working-directory: envirnoment/dev
+      - run: terraform fmt -check
+      - run: terraform init
+      - run: terraform validate
+      - run: terraform plan
