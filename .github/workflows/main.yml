@@ -24,16 +24,13 @@ jobs:
 
       - name: Terraform Format Check
         run: terraform fmt -check
-        working-directory: ./environment/dev
-
+        working-directory: envirnoment/dev
       - name: Terraform Init
         run: terraform init
-        working-directory: ./environment/dev
-
+        working-directory: envirnoment/dev
       - name: Terraform Validate
         run: terraform validate
-        working-directory: ./environment/dev
-
+       working-directory: envirnoment/dev
       - name: Terraform Plan
         run: terraform plan
-        working-directory: ./environment/dev
+       working-directory: envirnoment/dev
