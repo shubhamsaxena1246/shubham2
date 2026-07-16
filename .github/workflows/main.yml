@@ -8,10 +8,9 @@ on:
 jobs:
   terraform:
     runs-on: ubuntu-latest
-
     defaults:
       run:
-        working-directory: envirnoment/dev
+        working-directory: environment/dev
 
     steps:
       - name: Checkout Repository
