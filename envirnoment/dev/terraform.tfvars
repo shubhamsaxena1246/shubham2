@@ -4,9 +4,9 @@ rg1 = {
     location = "UK South"
    }
 }
-rg1 = {
+rg2 = {
    module = {
-    name = "tinku"
+    name = "rinku"
     location = "UK South"
    }
 }
