@@ -15,4 +15,4 @@ provider "azurerm" {
     # = "rg-netflix-landing"
     
   }
-}
+

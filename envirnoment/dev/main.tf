@@ -26,3 +26,4 @@ module "NIC" {
   source = "../../modules/azurerm_NIC"
   nics = var.nics2
 }
+
