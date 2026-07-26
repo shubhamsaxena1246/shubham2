@@ -4,6 +4,12 @@ rg1 = {
     location = "UK South"
    }
 }
+rg2 = {
+   module = {
+    name = "rinku"
+    location = "UK South"
+   }
+}
 
 vnet1 = {
     module = {
